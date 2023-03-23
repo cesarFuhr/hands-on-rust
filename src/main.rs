@@ -140,7 +140,9 @@ impl State {
         );
         ctx.print_color_centered(9, GREEN, BLACK, "Press 1 to play again.");
 
-        if let Some(VirtualKeyCode::Key1) = ctx.key {}
+        if let Some(VirtualKeyCode::Key1) = ctx.key {
+            self.reset_game_state();
+        }
     }
 }
 
